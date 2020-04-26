@@ -1,0 +1,7 @@
+POST http://localhost:3001/api/processes
+Content-Type: application/json
+
+{
+    "process_id": "ghgh6767mnkj9",
+    "status": "COMPLETED"
+}
