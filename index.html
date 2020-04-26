@@ -44,7 +44,22 @@
             });
 
         function myFunction(item, index) {
-            document.getElementById("demo").innerHTML += "<li class='list-group-item'>" + item.process_id + ": " + "<span class='border border-primary'>" + item.status + "</span>" +"</li>";
+            let alertClass = "warning";
+            switch (item.status) {
+                case 'COMPLETED':
+                    alertClass = "success";
+                    break;
+                case 'CANCELLED':
+                    alertClass = "danger";
+                    break;
+                case 'REJECTED':
+                    alertClass = "warning"
+                    break;
+                default:
+                    alertClass = "primary";
+            }
+
+            document.getElementById("demo").innerHTML += "<li class='list-group-item alert alert-" + alertClass + "'>Process with id =" + item.process_id + " set to " + "<span class='border border-primary'>" + item.status + "</span>" + " at " + item.date + "</li>";
         }
     </script>
 </body>

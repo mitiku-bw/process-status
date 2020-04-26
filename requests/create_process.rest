@@ -1,7 +1,7 @@
-POST http://localhost:3001/api/processes
+POST https://damp-island-02884.herokuapp.com/api/processes
 Content-Type: application/json
 
 {
-    "process_id": "ghgh6767mnkj9",
+    "process_id": "glh667mtrnkj9",
     "status": "COMPLETED"
 }
