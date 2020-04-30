@@ -54,7 +54,7 @@
         function myFunction(item, index) {
             let alertClass = "warning";
             switch (item.status) {
-                case 'COMPLETED':
+                case 'COMPLETED': case 'DONE':
                     alertClass = "success";
                     break;
                 case 'CANCELLED': case 'canceled':
